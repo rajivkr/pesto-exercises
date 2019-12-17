@@ -1,4 +1,4 @@
-const flattenArr = (arr = []) => {
+export const flattenArr = (arr = []) => {
   arr = arr.reduce((a, b) => {
     return a.concat(b);
   }, []);
