@@ -16,3 +16,7 @@ let factMemo = fact();
 console.log(factMemo(3));
 console.log(factMemo(4));
 console.log(factMemo(3));
+
+module.exports = {
+  factMemo
+};
