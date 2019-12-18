@@ -29,7 +29,7 @@ let memoizer = fun => {
   let cache = {};
   return n => {
     if (cache[n] != undefined) {
-      console.log(`Fetched from cache`);
+      console.log('Fetched from cache');
       return cache[n];
     } else {
       let result = fun(n);

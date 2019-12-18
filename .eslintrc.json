@@ -14,6 +14,7 @@
     "jest/prefer-expect-assertions": 0,
     "jest/prefer-inline-snapshots": 0,
     "jest/prefer-strict-equal": 0,
-    "jest/require-to-throw-message": 0
+    "jest/require-to-throw-message": 0,
+    "jest/prefer-to-have-length": 0
   }
 }
