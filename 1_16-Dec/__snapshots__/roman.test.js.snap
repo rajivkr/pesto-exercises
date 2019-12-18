@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convert to roman test cases should convert given num to roman letter 1`] = `"V"`;
+
+exports[`convert to roman test cases should convert given num to roman letter 2`] = `"D"`;

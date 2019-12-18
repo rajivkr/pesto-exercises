@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flatten array test cases should flatten the given array 1`] = `
+Array [
+  1,
+  2,
+  3,
+  4,
+  Array [
+    5,
+    6,
+  ],
+]
+`;

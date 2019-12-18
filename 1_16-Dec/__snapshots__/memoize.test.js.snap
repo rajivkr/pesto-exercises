@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`using memoize test cases should use it from cache 1`] = `"120 + 720 + 120"`;

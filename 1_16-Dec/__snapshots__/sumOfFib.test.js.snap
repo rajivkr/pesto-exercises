@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sum of odd Fib test cases should add Odd fib until given number 1`] = `23`;
+
+exports[`sum of odd Fib test cases should add Odd fib until given number 2`] = `44`;
