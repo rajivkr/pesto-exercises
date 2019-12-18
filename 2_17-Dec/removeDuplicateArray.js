@@ -1,6 +1,6 @@
-const removeDuplicatesInArray = (sourceArr = [], arrToRemove = []) => {
-  const sourceArrAsSet = new Set(sourceArr);
-  return arrToRemove.filter(value => !sourceArrAsSet.has(Math.abs(value)));
+const removeDuplicatesInArray = (duplicateArr = [], distinctArr = []) => {
+  const duplicateArrAsSet = new Set(duplicateArr);
+  return distinctArr.filter(value => !duplicateArrAsSet.has(value));
 };
 
 console.log(removeDuplicatesInArray([1, 2], [1, 2, 1, 4, 5]));

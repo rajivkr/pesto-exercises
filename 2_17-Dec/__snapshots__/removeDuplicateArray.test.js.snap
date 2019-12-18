@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`using memoize test cases should use it from cache 1`] = `
+Array [
+  4,
+  5,
+]
+`;
+
+exports[`using memoize test cases should use it from cache 2`] = `Array []`;
+
+exports[`using memoize test cases should use it from cache 3`] = `
+Array [
+  3,
+  4,
+]
+`;
