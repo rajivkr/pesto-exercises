@@ -1,18 +1,21 @@
-const fact = () => {
-  let factorialCache = {};
-  return (factRecursive = n => {
-    if (factorialCache[n] !== undefined) {
-      console.log('Factorial fetched from factorialCache');
-      return factorialCache[n];
+const fact = n => (n == 0 ? 1 : n * fact(n - 1));
+
+const memoizer = (funcToCall, keyMaker = JSON.stringify) => {
+  let inMemoryCache = new Map();
+  return valueToProcess => {
+    const keyToProcess = keyMaker(valueToProcess);
+    if (inMemoryCache.has(keyToProcess)) {
+      console.log(`Fetching from cache`);
+      return inMemoryCache.get(keyToProcess);
     } else {
-      let result = n == 0 ? 1 : n * factRecursive(n - 1, factorialCache);
-      factorialCache[n] = result;
-      return result;
+      const processedValue = funcToCall(valueToProcess);
+      inMemoryCache.set(keyToProcess, processedValue);
+      return processedValue;
     }
-  });
+  };
 };
 
-let factMemo = fact();
+let factMemo = memoizer(fact);
 console.log(factMemo(3));
 console.log(factMemo(4));
 console.log(factMemo(3));
