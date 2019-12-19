@@ -29,7 +29,7 @@ let memoizer = fun => {
   let cache = {};
   return n => {
     if (cache[n] != undefined) {
-      console.log(`Fetched from cache`);
+      console.log('Fetched from cache');
       return cache[n];
     } else {
       let result = fun(n);
@@ -40,10 +40,5 @@ let memoizer = fun => {
 };
 
 let getRomanMemoized = memoizer(getRoman);
-console.log(getRomanMemoized(2821));
-console.log(getRomanMemoized(2810));
-console.log(getRomanMemoized(2810));
 
-module.exports = {
-  getRomanMemoized
-};
+export { getRomanMemoized };

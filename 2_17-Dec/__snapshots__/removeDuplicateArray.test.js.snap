@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`removing Duplicates test cases should remove from first array 1`] = `
+Array [
+  4,
+  5,
+]
+`;
+
+exports[`removing Duplicates test cases should remove from first array 2`] = `
+Array [
+  3,
+  4,
+]
+`;

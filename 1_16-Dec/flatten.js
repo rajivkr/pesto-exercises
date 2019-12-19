@@ -5,8 +5,4 @@ const flattenArr = (arr = []) => {
   return arr;
 };
 
-console.log(flattenArr([1, 2, [3, 4, [5, 6]]]));
-
-module.exports = {
-  flattenArr
-};
+export { flattenArr };

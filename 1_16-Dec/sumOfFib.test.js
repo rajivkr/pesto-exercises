@@ -1,4 +1,5 @@
-const sumOfFibs = require('./sumOfFib').sumOfFibs;
+import { sumOfFibs } from './sumOfFib';
+
 describe('sum of odd Fib test cases', () => {
   it('should add Odd fib until given number', () => {
     expect(sumOfFibs(20)).toMatchSnapshot();
