@@ -24,8 +24,4 @@ const addArray = (firstArr, secondArr) => {
   return resultArr;
 };
 
-console.log(addArray([0, 1, 0, 4], [100, -200, 200, 400, 0, 99999]));
-
-module.exports = {
-  addArray
-};
+export { addArray };

@@ -40,10 +40,5 @@ let memoizer = fun => {
 };
 
 let getRomanMemoized = memoizer(getRoman);
-console.log(getRomanMemoized(2821));
-console.log(getRomanMemoized(2810));
-console.log(getRomanMemoized(2810));
 
-module.exports = {
-  getRomanMemoized
-};
+export { getRomanMemoized };

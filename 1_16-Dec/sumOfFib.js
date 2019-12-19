@@ -15,8 +15,5 @@ let sumOfFibs = num => {
   }
   return result;
 };
-console.log(sumOfFibs(10));
 
-module.exports = {
-  sumOfFibs
-};
+export { sumOfFibs };

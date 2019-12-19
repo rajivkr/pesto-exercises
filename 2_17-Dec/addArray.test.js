@@ -1,4 +1,4 @@
-const arrayAddition = require('./addArray').addArray;
+import { addArray as arrayAddition } from './addArray';
 
 describe('arrayAddition', () => {
   it('should return addition of 2 arrays as a separate array', () => {

@@ -8,6 +8,4 @@ const removeDuplicatesInArray = (duplicateArr = [], distinctArr = []) => {
   });
 };
 
-module.exports = {
-  removeDuplicatesInArray
-};
+export { removeDuplicatesInArray };

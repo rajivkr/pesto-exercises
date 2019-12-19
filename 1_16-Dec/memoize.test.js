@@ -1,4 +1,4 @@
-const memoize = require('./memoize').factMemo;
+import { factMemo as memoize } from './memoize';
 
 describe('using memoize test cases', () => {
   it('should use it from cache', () => {

@@ -1,5 +1,4 @@
-const removeDuplicatesInArray = require('./removeDuplicateArray')
-  .removeDuplicatesInArray;
+import { removeDuplicatesInArray } from './removeDuplicateArray';
 
 describe('removing Duplicates test cases', () => {
   it('should remove from first array', () => {

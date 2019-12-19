@@ -5,7 +5,7 @@ const memoizer = (funcToCall, keyMaker = JSON.stringify) => {
   return valueToProcess => {
     const keyToProcess = keyMaker(valueToProcess);
     if (inMemoryCache.has(keyToProcess)) {
-      console.log(`Fetching from cache`);
+      console.log('Fetching from cache');
       return inMemoryCache.get(keyToProcess);
     } else {
       const processedValue = funcToCall(valueToProcess);
@@ -16,10 +16,5 @@ const memoizer = (funcToCall, keyMaker = JSON.stringify) => {
 };
 
 let factMemo = memoizer(fact);
-console.log(factMemo(3));
-console.log(factMemo(4));
-console.log(factMemo(3));
 
-module.exports = {
-  factMemo
-};
+export { factMemo };
