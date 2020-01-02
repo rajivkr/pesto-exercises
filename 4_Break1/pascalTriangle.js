@@ -14,8 +14,14 @@ let getPascalsTriangle = maxRows => {
   return resultArr;
 };
 
-const Triangle = numOfRows => {
-  rows = getPascalsTriangle(numOfRows);
-};
+class Triangle {
+  constructor(numOfRows) {
+    this.numOfRows = numOfRows;
+  }
 
-console.log(getPascalsTriangle(20)[19]);
+  get rows() {
+    return getPascalsTriangle(this.numOfRows);
+  }
+}
+
+export { Triangle };
