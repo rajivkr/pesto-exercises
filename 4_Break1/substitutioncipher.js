@@ -1,13 +1,19 @@
-let substitionImpl = shiftArr => inputString => {
-  console.log(shiftArr, inputString);
-  return 'a';
+let substitutionCipher = (str, amount = 1) => {
+  return str.replace(/[a-zA-Z]/g, letter => {
+    let asciiCode = letter.charCodeAt(0);
+
+    // A - 4 B - 6
+    amount = asciiCode % 2 === 0 ? 6 : 4;
+
+    // Uppercase
+    if (asciiCode >= 65 && asciiCode <= 90)
+      letter = String.fromCharCode(((asciiCode - 65 + amount) % 26) + 65);
+    // Lowercase
+    else if (asciiCode >= 97 && asciiCode <= 122)
+      letter = String.fromCharCode(((asciiCode - 97 + amount) % 26) + 97);
+
+    return letter;
+  });
 };
 
-let caesarCipher = (str, key) => {
-  return str.replace(/[a-zA-Z]/g, c =>
-    String.fromCharCode(((c.charCodeAt(0) - 65 + key) % 26) + 65)
-  );
-};
-
-let substitutionCipher = substitionImpl();
-console.log(substitutionCipher('ABC'));
+export { substitutionCipher };
