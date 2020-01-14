@@ -1,6 +1,6 @@
 import { curry } from './curry';
 
-describe.skip('curry', () => {
+describe('curry', () => {
   test('curries the function at least once', () => {
     const add = curry((a, b) => {
       return a + b;
