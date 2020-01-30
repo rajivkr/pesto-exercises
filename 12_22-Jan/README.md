@@ -40,17 +40,36 @@ describe('cacheFunction', () => {
 });
 ```
 
-- [Counter](https://www.notion.so/Counter-4f7cc0ceee2948798ec9d7cc4d026b54)
-
-```
-Return a function that when invoked increments and returns a counter variable.
-```
+- [User Check Password](https://www.notion.so/User-Check-Password-0e00dc22761d4e3d9a99cbc527c7d781)
 
 ```javascript
-//Examples
-const newCounter = counter();
+//Instructions
+function User(username, password) {
+  // set a username and password property on the user object that is created
+}
 
-newCounter(); // 1
+// create a method on User called `checkPassword`
+// this method should take in a string and compare it to the object's password property
+// return `true` if they match, otherwise return `false`
 
-newCounter(); // 2
+User.prototype.checkPassword = function checkPassword(password) {};
+
+//Test cases
+describe('User', () => {
+  test('should return an object with the passed username and password when called with new', () => {
+    const me = new User('Pesto', 'iamabeast');
+    expect(me).toEqual({
+      username: 'Pesto',
+      password: 'iamabeast'
+    });
+  });
+
+  test('should have a method that checks password and returns correct boolean result', () => {
+    const me = new User('Pesto', 'iamabeast');
+    const result1 = me.checkPassword('iamabeast');
+    const result2 = me.checkPassword('iamnotabeast');
+    expect(result1).toBe(true);
+    expect(result2).toBe(false);
+  });
+});
 ```
