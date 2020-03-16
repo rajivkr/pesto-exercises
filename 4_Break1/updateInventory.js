@@ -1,3 +1,16 @@
+let stringCompareFunction = (a, b) => {
+  const itemA = a[1].toUpperCase();
+  const itemB = b[1].toUpperCase();
+
+  let comparison = 0;
+  if (itemA > itemB) {
+    comparison = 1;
+  } else if (itemA < itemB) {
+    comparison = -1;
+  }
+  return comparison;
+};
+
 let updateInventory = (arr1, arr2) => {
   arr2.forEach(secondArrElement => {
     let firstArrPosition = arr1
@@ -6,7 +19,7 @@ let updateInventory = (arr1, arr2) => {
     if (firstArrPosition === -1) arr1.push(secondArrElement);
     else arr1[firstArrPosition][0] += secondArrElement[0];
   });
-  return arr1.sort((a, b) => a[1] > b[1]);
+  return arr1.sort(stringCompareFunction);
 };
 
 export { updateInventory };
